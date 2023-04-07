@@ -2,6 +2,13 @@
 <p><%= @article.body %></p>
 
 <ul>
-    <li><%= link_to 'Edit', edit_article_path(@article.id) %></li>
+    <li><%= link_to 'Edit', edit_article_path(@article) %></li>
+    <li><%= link_to 'Delete', 
+            article_path(@article), 
+            method: :delete,
+            data: {
+                    turbo_method: :delete,
+                    turbo_confirm: 'Are you sure to delethe this?'
+                } %></li>
     <li><%= link_to 'Back', root_path %></li>
 </ul>
