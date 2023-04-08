@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
   # poderia ser assim também: before_action :set_article, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @articles = Article.all
+    current_page = (params[:page || 1]).to_i
+    @articles = Article.order(created_At: :desc).page(current_page).per(5)
   end
 
   def show

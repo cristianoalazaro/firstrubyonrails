@@ -72,3 +72,6 @@ group :test do
 end
 
 gem "cssbundling-rails"
+gem "simple_form", "~> 5.2"
+
+gem "kaminari", "~> 1.2"
