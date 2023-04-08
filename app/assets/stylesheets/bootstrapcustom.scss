@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <title>Blogstrap</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-
-    <style>
-    /* stylelint-disable selector-list-comma-newline-after */
+/* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
     border-bottom: 1px solid #e5e5e5;
@@ -79,19 +67,3 @@
   .blog-footer p:last-child {
     margin-bottom: 0;
   }
-    </style>
-
-  </head>
-
-  <body>
-
-    <%= render 'layouts/topnavbar' %>
-
-    <div class="container">  
-      <%= yield %>
-    </div>
-
-    <%= render 'layouts/footer' %>
-
-  </body>
-</html>
